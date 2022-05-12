@@ -11,6 +11,19 @@ The goal of this project is to predict quality of wine by utilizing a dataset hi
 
 ## Key Visualizations for Dashboard
 
+The following is an example dashboard for this project, which primarily highlights average points and price with a few different perspectives: 
+![](/Images/PracticeDashboard.png)
+
+
+The following is a bar chart showing the average points for the wineries with the most wines:
+![](/Images/TopWineriesAvePoints.png)
+
+Additional visualizatoins that may be beneficial for this project include: 
+- Heatmap of wine volumes by region or country
+- Interactive map with markers showing average wine price and points and winery with highest quality wine
+- Price and points by variety and designation
+- Most common variety by volume
+- Interactive dashboard in which the user can filter by country or region and see top wineries, top wines, and price
 
 ## NLP to Parse Description
 
