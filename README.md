@@ -40,3 +40,5 @@ Using supervised machine learning we will attempt to predict point values(target
 - Dissection of dataset into training and testing groups
 - Resampling, oversampling, undersampling, or combination thereof as the project warrants
 - Linear regression
+![ML](https://github.com/saraegregg/Mod20_Group_Challenge/blob/2ab0190fe76067d6ff9a9ddd7a6b1a1f714f352a/Images/ML_initial.png)
+
