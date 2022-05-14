@@ -6,8 +6,9 @@ The goal of this project is to predict quality of wine by utilizing a dataset hi
 ## Exploratory Data Analysis and Data Cleaning
 
 
-## Database Overview and ERD
 
+## Database Overview and ERD
+![](/Images/Wine_ERD.png)
 
 ## Key Visualizations for Dashboard
 The following is an example dashboard for this project, which primarily highlights average points and price with a few different perspectives: 
@@ -17,7 +18,7 @@ The following is an example dashboard for this project, which primarily highligh
 The following is a bar chart showing the average points for the wineries with the most wines:
 ![](/Images/TopWineriesAvePoints.png)
 
-Additional visualizatoins that may be beneficial for this project include: 
+Additional visualizations that may be beneficial for this project include: 
 - Heatmap of wine volumes by region or country
 - Interactive map with markers showing average wine price and points and winery with highest quality wine
 - Price and points by variety and designation
@@ -25,6 +26,11 @@ Additional visualizatoins that may be beneficial for this project include:
 - Interactive dashboard in which the user can filter by country or region and see top wineries, top wines, and price
 
 ## NLP to Parse Description
+In Google Colab, we are going to use a Spark Session to explore the relationship between the frequency of words and the point value of wine by doing the following:
+- Tokenize the data to create new column with all of the words of the description of the wine
+- Remove Stop Words from new column created when data was tokenized
+- Running HashingTF to see frequency of words
+- Export parsed dataframe to a clean csv
 
 ## Machine Learning Component Overview 
 Using supervised machine learning we will attempt to predict point values(target) using a specified set of features and utilizing several techniques such as:
