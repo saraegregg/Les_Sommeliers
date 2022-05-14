@@ -1,1 +1,44 @@
 # Mod20_Group_Challenge
+
+## Project Overview: Wine Quality Prediction
+The goal of this project is to predict quality of wine by utilizing a dataset highlighting over 130,000 individual wine entries with factors such as region, province, price, points (quality), description, variety, and designation. The project will utilize a regression machine learning approach to predict points (indicating wine quality from 80-100) by incorporating many of the factors included above. The project will also build a dashboard and/or interactive map to illustrate wine quality and price by region and province. it may also highlight top winery's by location. The dashboard could be beneficial for restaurant owners seeking to build a comprehensive and well-rounded wine offering and the map could be helpful for travel agents and/or individual consumers seeking high quality wine on the road.
+
+## Exploratory Data Analysis and Data Cleaning
+
+
+
+## Database Overview and ERD
+![](/Images/Wine_ERD.png)
+
+## Key Visualizations for Dashboard
+The following is an example dashboard for this project, which primarily highlights average points and price with a few different perspectives: 
+![](/Images/PracticeDashboard.png)
+
+
+The following is a bar chart showing the average points for the wineries with the most wines:
+![](/Images/TopWineriesAvePoints.png)
+
+Additional visualizations that may be beneficial for this project include: 
+- Heatmap of wine volumes by region or country
+- Interactive map with markers showing average wine price and points and winery with highest quality wine
+- Price and points by variety and designation
+- Most common variety by volume
+- Interactive dashboard in which the user can filter by country or region and see top wineries, top wines, and price
+
+## NLP to Parse Description
+In Google Colab, we are going to use a Spark Session to explore the relationship between the frequency of words and the point value of wine by doing the following:
+- Tokenize the data to create new column with all of the words of the description of the wine
+- Remove Stop Words from new column created when data was tokenized
+- Running HashingTF to see frequency of words
+- Export parsed dataframe to a clean csv
+
+## Machine Learning Component Overview 
+Using supervised machine learning we will attempt to predict point values(target) using a specified set of features and utilizing several techniques such as:
+- Conversion of categorical values to numerical
+- Bucketing or binning of target variable output
+- Removal of non-essential columns
+- Dissection of dataset into training and testing groups
+- Resampling, oversampling, undersampling, or combination thereof as the project warrants
+- Linear regression
+![ML](https://github.com/saraegregg/Mod20_Group_Challenge/blob/2ab0190fe76067d6ff9a9ddd7a6b1a1f714f352a/Images/ML_initial.png)
+
