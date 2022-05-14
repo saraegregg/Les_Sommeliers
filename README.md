@@ -26,4 +26,11 @@ Additional visualizatoins that may be beneficial for this project include:
 
 ## NLP to Parse Description
 
-## Machine Learning Component Overview
+## Machine Learning Component Overview 
+Using supervised machine learning we will attempt to predict point values(target) using a specified set of features and utilizing several techniques such as:
+- Conversion of categorical values to numerical
+- Bucketing or binning of target variable output
+- Removal of non-essential columns
+- Dissection of dataset into training and testing groups
+- Resampling, oversampling, undersampling, or combination thereof as the project warrants
+- Linear regression
