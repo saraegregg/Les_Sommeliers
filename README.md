@@ -7,6 +7,8 @@ The goal of this project is to predict quality of wine by utilizing a dataset hi
 Our team will continue to communicate via our Slack message in order to divide work, ask questions, clarify instructions, and colaborate. Our standing Friday meeting on Microsoft Teams will be moved to Saturday when schedules conflict. Team members may organize additional web meetings as necessary either through the group Slack or by direct messaging each other.
 
 ## Exploratory Data Analysis and Data Cleaning
+First of all, we removed the specialty characters from the original Winemag csv file so that the NLP in the machine learning would be able to recognize words like "creme brulee" or "creme anglaise", and regions with special characters (eg. Rias Baixas) could still be included in our analysis.
+
 In the data_cleaning folder of our repository, we have created a Jupyter Notebook (data_week1) with code that imports the dataset by reading in the wine_data.csv and removes unnecesary columns. Then we view the measures of central tendency and create box and whisker plots to understand the spread of the numerical data. Additional preliminary visualizations show the countries represented and the relative number of wines each provided to the dataset.
 
 ![Number of Wines by Country](/Images/No_wines_by_co.png)
@@ -21,10 +23,12 @@ In the data_cleaning folder of our repository, we have created a Jupyter Noteboo
 
 ## Key Visualizations for Dashboard
 The following is an example dashboard for this project, which primarily highlights average points and price with a few different perspectives: 
+
 ![](/Images/PracticeDashboard.png)
 
 
 The following is a bar chart showing the average points for the wineries with the most wines:
+
 ![](/Images/TopWineriesAvePoints.png)
 
 Additional visualizations that may be beneficial for this project include: 
