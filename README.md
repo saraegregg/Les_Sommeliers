@@ -8,6 +8,7 @@ Our team will continue to communicate via our Slack message in order to divide w
 
 ## Exploratory Data Analysis and Data Cleaning
 In the data_cleaning folder of our repository, we have created a Jupyter Notebook (data_week1) with code that imports the dataset by reading in the wine_data.csv and removes unnecesary columns. Then we view the measures of central tendency and create box and whisker plots to understand the spread of the numerical data. Additional preliminary visualizations show the countries represented and the relative number of wines each provided to the dataset.
+
 ![Number of Wines by Country](/Images/No_wines_by_country.png)
 ![Points Box and Whisker Plot](/Images/Points_baw.png)
 ![Wines and Their Points](/Images/Wines_and_points.png)
