@@ -19,7 +19,8 @@ In the data_cleaning folder of our repository, we have created a Jupyter Noteboo
 
 
 ## Database Overview and ERD
-![](/Images/Wine_ERD.png)
+![Wine_ERG](https://user-images.githubusercontent.com/96449605/168492777-9f993359-80bb-4937-acab-99ac405b6316.png)
+
 
 ## Key Visualizations for Dashboard
 The following is an example dashboard for this project, which primarily highlights average points and price with a few different perspectives: 
