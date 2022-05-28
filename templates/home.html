@@ -1,10 +1,27 @@
 {% extends "base.html" %}
 {% set active_page = "Home" %}
 {% block content %}
-<link rel="stylesheet" href="{{url_for('static', filename='css/base.css')}}" />
-<div style='margin-top: 30px; text-align: center;'>
-  <h1>Find your wine!</h1>
-  <p class="lead"><i>Subtitle of Project</i></p>
-</div>
-<script src="{{url_for('static', filename='js/home.js')}}"></script>
-{% endblock %}
+
+<link href="static/css/home.css" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/8502dc2626.js" crossorigin="anonymous"></script>
+<link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Sofia|Urbanist|Bangers|Patrick+Hand&display=swap" />
+<title>Home</title>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row header-row r1">
+        <h1 class="display-1 text-center">Find your wine!</h1>
+        <p class="lead text-center">
+          Let the Sommelier's help you find the perfect wine for your next occasion.  Whether you are a restaurant
+          looking for wines that would pair perfectly with a customer's or a person looking to try new wines, you have come to the right place!
+          Based on words that are typically used to describe a wine, you can select the items that are important to you in a wine and we can
+          find a wine that fits your price point and will provide you with the quality of the wine.  Cheers!   
+        </p>
+        <p class="lead text-center">
+          Using wine reviews, our team has trained a machine learning model that will predict a wine that
+          will fit within your budget and also fit the type of wine that you enjoy.
+        </p>
+
