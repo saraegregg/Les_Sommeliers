@@ -1,40 +1,34 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import sklearn
+import pandas as pd
+import pickle
 
 app = Flask(__name__)
 
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-@app.route('/')
-@app.route('/home')
-def home():
-    return render_template('home.html')
+@app.route("/", methods=["GET", "POST"])
+def index(): 
+    featureList = pd.read_csv("features.csv").to_dict("records")
 
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-@app.route('/about')
-def about():
-    return render_template('about.html')
+    prediction = '' 
+    if request.method == "POST":
+
+        values = []
+        for f in featureList: 
+            name = f["Name"]
+            f["Value"] = float(request.form[name])
+            values.append(f["Value"])
+
+        model = pickle.load(open("model.p", "rb"))
+
+        print("values", values)
+
+        prediction = model.predict([values])
+        
+        
 
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-@app.errorhandler(404)
-def page_not_found(error):
-    return render_template('404.html'), 404
+    return render_template("index.html", featureList=featureList, prediction=prediction)
 
-
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-if __name__ == '__main__':
-
-    # Run this when running on LOCAL server...
+if __name__ == "__main__":
     app.run(debug=True)
-
-    # ...OR run this when PRODUCTION server.
-    # app.run(debug=False)
