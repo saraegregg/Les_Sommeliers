@@ -1,0 +1,11 @@
+body {
+
+    color: #000000;
+    background-color: rgb(229, 240, 247);
+  }
+  .jumbotron {
+    background-image: url("../images/pour.png");
+    background-size: 100% 100%;
+    text-align: center;
+    color: #f00e0e;
+  }
