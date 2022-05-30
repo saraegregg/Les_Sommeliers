@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wines of the World!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron" style="text-align: center">
+            <h1>Find your wine!</h1>
+        </div>
+        <!-- User Inputs -->
+        <div class="col-sm scenario">
+            <h2>Selections</h2>
+            <hr>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="container inputBox" id="dropdownStyle">
+                        <h4>Country</h4>
+                        <div id="inputBox">
+                            <select id="Country"></select>
+                        </div>
+                        <h4>Description</h4>
+                        <div id="inputBox">
+                            <select id="Description"></select>
+                        </div>
+
+
+
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+
+                        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+body {
+
+    color:  darkred;
+    
+  }
+  body {
+    background-image: url("../images/pour");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "system-ui";
+  }
