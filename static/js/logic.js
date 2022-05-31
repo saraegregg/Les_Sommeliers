@@ -37,12 +37,14 @@ let baseMaps = {
 };
 
 // 1. Add a 2nd layer group for the tectonic plate data.
+let AllWines = new L.LayerGroup();
 let TopPointWines = new L.LayerGroup();
 let MidPointWines = new L.LayerGroup();
 let LowPointWines = new L.LayerGroup();
 
 // 2. Add a reference to the tectonic plates group to the overlays object.
 let overlays = {
+  "All Top Wines": AllWines,
   "100 Point Wines": TopPointWines,
   "99 Point Wines": MidPointWines,
   "98 Point Wines": LowPointWines
@@ -53,7 +55,9 @@ let overlays = {
 L.control.layers(baseMaps, overlays).addTo(map);
 
 // Retrieve the earthquake GeoJSON data.
-d3.csv("resources/top_wine_data.csv).then(function(data) {
+
+d3.json("/top_wine_data.json").then(function(error, data) {
+  console.log(data)
 
   // This function returns the style data for each of the earthquakes we plot on
   // the map. We pass the magnitude of the earthquake into two separate functions
@@ -92,24 +96,23 @@ d3.csv("resources/top_wine_data.csv).then(function(data) {
     return points * 4;
   }
 
-//   // Creating a GeoJSON layer with the retrieved data.
-//   L.geoJson(data, {
-//     	// We turn each feature into a circleMarker on the map.
-//     	pointToLayer: function(feature, latlng) {
-//       		console.log(data);
-//       		return L.circleMarker(latlng);
-//         },
-//       // We set the style for each circleMarker using our styleInfo function.
-//     style: styleInfo,
-//      // We create a popup for each circleMarker to display the magnitude and location of the earthquake
-//      //  after the marker has been created and styled.
-//      onEachFeature: function(feature, layer) {
-//       layer.bindPopup("Magnitude: " + feature.properties.mag + "<br>Location: " + feature.properties.place);
-    
-).addTo(allEarthquakes);
+  // Creating a GeoJSON layer with the retrieved data.
+  L.geoJson(data, {
+    	// We turn each feature into a circleMarker on the map.
+    	pointToLayer: function(feature, latlng) {
+      		console.log(data);
+      		return L.circleMarker(latlng);
+        },
+      // We set the style for each circleMarker using our styleInfo function.
+    style: styleInfo,
+     // We create a popup for each circleMarker to display the magnitude and location of the earthquake
+     //  after the marker has been created and styled.
+     onEachFeature: function(feature, layer) {
+      // layer.bindPopup("Magnitude: " + feature.properties.mag + "<br>Location: " + feature.properties.place);
+    }})}).addTo(AllWines);
 
   // Then we add the earthquake layer to our map.
-  allEarthquakes.addTo(map);
+  AllWines.addTo(map);
 
 // //Deliverable 2 Major Earthqaukes
 // // 3. Retrieve the major earthquake GeoJSON data >4.5 mag for the week.
