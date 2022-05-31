@@ -34,12 +34,26 @@ The following is a bar chart showing the average points for the wineries with th
 ![](/Images/TopWineriesAvePoints.png)
 
 Additional visualizations that may be beneficial for this project include: 
->>>>>>> main
+
 - Heatmap of wine volumes by region or country
 - Interactive map with markers showing average wine price and points and winery with highest quality wine
 - Price and points by variety and designation
 - Most common variety by volume
 - Interactive dashboard in which the user can filter by country or region and see top wineries, top wines, and price
+
+The following are three additional visualizations created for segment 2: 
+![](/Images/PriceByWineryCountry.png)
+
+![](/Images/PricePointsLabels.png)
+
+![](/Images/PointsByCountry.png)
+
+## Mapping with Leaflet
+In addition to the Tableau Dashboard, the Sommeliers are creating an interactive map that will show the winery location for the top 20 reasonable priced (<$100) wines. This is intended to help wine enthusiasts plan travel and vacation itineraries to experience the worlds top wines! Progress thus far includes an API call for lat/long and an initial map with tile layers and layer groups.
+
+![](/Images/APIcall.png)
+![](/Images/APIcall2.png)
+![](/Images/Mappingv1.png)
 
 ## NLP to Parse Description
 In Google Colab, we are going to use a Spark Session to explore the relationship between the frequency of words and the point value of wine by doing the following:
