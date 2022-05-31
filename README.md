@@ -58,3 +58,13 @@ Using supervised machine learning we will attempt to predict point values(target
 - Linear regression
 ![ML](https://github.com/saraegregg/Mod20_Group_Challenge/blob/2ab0190fe76067d6ff9a9ddd7a6b1a1f714f352a/Images/ML_initial.png)
 
+
+### UPDATED MACHINE LEARNING MODEL PROCESS:
+After building and testing multiple Machine Learning models, it appears the Logistic Regression Model has produced the best accuracy rate to date. 
+
+Utilizing features including price, variety, country, and specified list of descriptive words, our model was able to predict point value range with accuracy rate of just over 70%.
+
+![LR](https://github.com/saraegregg/Mod20_Group_Challenge/blob/4e27eb71c98960caf70d8fb9c884e351c6f75f0b/Images/LR%20Model.png)
+
+
+
