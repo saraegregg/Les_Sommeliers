@@ -56,7 +56,7 @@ L.control.layers(baseMaps, overlays).addTo(map);
 
 // Retrieve the earthquake GeoJSON data.
 
-d3.json("/top_wine_data.json").then(function(error, data) {
+d3.json("top_wine_data.json").then(function(error, data) {
   console.log(data)
 
   // This function returns the style data for each of the earthquakes we plot on
