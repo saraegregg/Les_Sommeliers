@@ -1,12 +1,8 @@
 # import necessary libraries
-import os
-import re
-from flask import (
-    Flask,
-    render_template,
-    jsonify,
-    request,
-    redirect)
+from flask import Flask, render_template, request, jsonify
+import joblib
+import pandas as pd
+import pickle as pkl
 
 #################################################
 # Flask Setup
