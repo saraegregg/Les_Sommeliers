@@ -1,0 +1,419 @@
+,province_ID,province,country_ID
+1,0,Douro,0
+2,1,Oregon,1
+3,2,Michigan,1
+5,3,Northern Spain,2
+6,4,Sicily & Sardinia,3
+7,5,Alsace,4
+8,6,Rheinhessen,5
+10,7,California,1
+15,8,Mosel,5
+16,9,Other,6
+17,10,Mendoza Province,6
+19,11,Virginia,1
+36,12,Colchagua Valley,7
+42,13,Beaujolais,4
+44,14,Maule Valley,7
+53,15,Bordeaux,4
+58,16,Maipo Valley,7
+59,17,Washington,1
+61,18,Central Italy,3
+63,19,Champagne,4
+65,20,Burgundy,4
+72,21,Southern Italy,3
+77,22,South Australia,8
+80,23,Rapel Valley,7
+81,24,Galicia,2
+82,25,France Other,4
+88,26,Tuscany,3
+93,27,Burgenland,9
+97,28,New York,1
+103,29,Leyda Valley,7
+125,30,Stellenbosch,10
+132,31,Simonsberg-Stellenbosch,10
+151,32,Alentejano,0
+154,33,Central Spain,2
+160,34,Southwest France,4
+164,35,Aconcagua Valley,7
+172,36,Loncomilla Valley,7
+174,37,Marlborough,11
+189,38,Casablanca Valley,7
+197,39,Western Cape,10
+201,40,Northeastern Italy,3
+202,41,Judean Hills,12
+203,42,Alentejo,0
+208,43,Coastal Region,10
+209,44,Rhone Valley,4
+215,45,Galilee,12
+217,46,Beira Atlantico,0
+219,47,Tokaj,13
+269,48,Leithaberg,9
+271,49,Santorini,14
+280,50,Kremstal,9
+287,51,Catalonia,2
+306,52,Recas,15
+311,53,Hawke's Bay,11
+318,54,Curico Valley,7
+327,55,Limari­ Valley,7
+336,56,Colchagua Costa,7
+337,57,Languedoc-Roussillon,4
+338,58,Provence,4
+345,59,Victoria,8
+347,60,Rheingau,5
+350,61,Piedmont,3
+351,62,Tokaji,13
+368,63,Veneto,3
+391,64,Central Valley,7
+393,65,Lontue Valley,7
+423,66,Weinviertel,9
+441,67,Niederosterreich,9
+444,68,Wagram,9
+447,69,Loire Valley,4
+449,70,Lombardy,3
+454,71,Ontario,16
+502,72,Osterreichischer Sekt,9
+584,73,Kamptal,9
+586,74,Steiermark,9
+587,75,Sudsteiermark,9
+596,76,Crete,14
+601,77,Valle de Guadalupe,17
+613,78,Vinho Verde,0
+622,79,Idaho,1
+646,80,Tejo,0
+652,81,Western Australia,8
+667,82,Levante,2
+710,83,Martinborough,11
+714,84,Central Otago,11
+718,85,Lisboa,0
+724,86,Texas,1
+737,87,Peni­nsula de Setubal,0
+746,88,Australia Other,8
+766,89,Tasmania,8
+811,90,Franken,5
+864,91,Ahr,5
+903,92,Nahe,5
+984,93,Dealu Mare,15
+1063,94,Darling,10
+1065,95,Port,0
+1135,96,Chile,7
+1153,97,Sudoststeiermark,9
+1155,98,Corinth,14
+1160,99,Halkidiki,14
+1187,100,Thrace,18
+1200,101,Pfalz,5
+1242,102,Robertson,10
+1265,103,Dan,12
+1297,104,Northwestern Italy,3
+1305,105,Andalucia,2
+1319,106,Awatere Valley,11
+1320,107,Wiener Gemischter Satz,9
+1341,108,Wachau,9
+1371,109,Pennsylvania,1
+1389,110,Swartland,10
+1400,111,Dao,0
+1477,112,Rio Claro,7
+1486,113,Villany,13
+1499,114,Cachapoal Valley,7
+1543,115,Jidvei,15
+1551,116,Peninsula de Setubal,0
+1627,117,America,1
+1684,118,Traisental,9
+1700,119,Bairrada,0
+1704,120,Negev Hills,12
+1717,121,Ribatejano,0
+1802,122,Duriense,0
+1850,123,New Jersey,1
+1884,124,Beiras,0
+1906,125,Spanish Islands,2
+1931,126,Upper Galilee,12
+2005,127,Vinho Espumante,0
+2115,128,Epanomi,14
+2166,129,Nemea,14
+2183,130,Peloponnese,14
+2205,131,Aconcagua Costa,7
+2272,132,Moravia,19
+2292,133,Slovenia,20
+2384,134,Terras do Dao,0
+2396,135,Beira Interior,0
+2501,136,Panciu,15
+2741,137,Bi­o Bi­o Valley,7
+2747,138,Romania,15
+2902,139,Minho,0
+3001,140,Italy Other,3
+3031,141,Bucelas,0
+3102,142,Peumo,7
+3199,143,Thermenregion,9
+3261,144,Carnuntum,9
+3273,145,Estremadura,0
+3322,146,Canterbury,11
+3390,147,Spain Other,2
+3462,148,Drama,14
+3474,149,Ella Valley,12
+3576,150,Moselle Luxembourgeoise,21
+3680,151,Walker Bay,10
+3715,152,Wurttemberg,5
+3716,153,Baden,5
+3738,154,Pangeon,14
+3755,155,Elqui Valley,7
+3763,156,Wairau Valley,11
+3938,157,Portuguese Table Wine,0
+4007,158,Istria,22
+4019,159,Peljesac,22
+4048,160,Kakheti,23
+4051,161,Canelones,24
+4073,162,England,25
+4199,163,Marchigue,7
+4206,164,Paarl,10
+4763,165,Weinland Osterreich,9
+4788,166,Mantinia,14
+4884,167,Chalkidiki,14
+4896,168,Lebanon,26
+4948,169,Setubal,0
+5000,170,Mosel-Saar-Ruwer,5
+5085,171,Pocerina,27
+5129,172,British Columbia,16
+5131,173,Puente Alto,7
+5176,174,Kumeu,11
+5199,175,Tras-os-Montes,0
+5226,176,Shomron,12
+5263,177,Rapsani,14
+5290,178,New South Wales,8
+5354,179,Nelson,11
+5355,180,Waipara Valley,11
+5367,181,Constantia,10
+5595,182,San Antonio,7
+5852,183,Pinto Bandeira,28
+5990,184,Primorska,20
+5996,185,Moldova,29
+6005,186,Uruguay,24
+6008,187,Zenata,30
+6201,188,Colorado,1
+6376,189,South Africa,10
+6547,190,Arizona,1
+6565,191,Ica,31
+6639,192,San Vicente,17
+6673,193,Nashik,32
+6782,194,Franschhoek,10
+6969,195,Atlantida,24
+6970,196,Thracian Valley,33
+6987,197,Tarnave,15
+6997,198,Vipavska Dolina,20
+7149,199,Bekaa Valley,26
+7234,200,Elgin,10
+7255,201,Itata Valley,7
+7322,202,Table wine,0
+7325,203,Samson,12
+7340,204,Wagram-Donauland,9
+7490,205,New Mexico,1
+7568,206,Cyprus,34
+7589,207,Pageon,14
+7643,208,South Island,11
+7679,209,Naoussa,14
+7697,210,Wellington,10
+7938,211,Danube River Plains,33
+7985,212,Gisborne,11
+8170,213,Armenia,35
+8184,214,Santa Cruz,7
+8275,215,KorÄula,22
+8423,216,Viile Timisului,15
+8431,217,Nevada,1
+8432,218,Illinois,1
+8778,219,Aegean,18
+9101,220,Simonsberg-Paarl,10
+9133,221,Juanico,24
+9140,222,Black Sea Coastal,33
+9151,223,Santa Catarina,28
+9364,224,Overberg,10
+9490,225,Atalanti Valley,14
+9503,226,Sebes,15
+9667,227,Moscatel de Setubal,0
+9681,228,Macedonia,14
+9700,229,Ribatejo,0
+10081,230,Germany,5
+10145,231,Palmela,0
+10153,232,Galil,12
+10290,233,Kras,20
+10301,234,Croatia,22
+10317,235,Waipara,11
+10509,236,Olifants River,10
+10532,237,Montevideo,24
+10617,238,Vienna,9
+10992,239,Hungary,13
+11832,240,Lolol Valley,7
+11892,241,Cauquenes Valley,7
+12061,242,Neusiedlersee,9
+12219,243,Wairarapa,11
+12399,244,Alenquer,0
+12419,245,Goriska Brda,20
+12448,246,Murfatlar,15
+12542,247,Washington-Oregon,1
+12575,248,New Zealand,11
+12669,249,Serra Gaucha,28
+12670,250,San Jose,24
+13218,251,Vale dos Vinhedos,28
+13304,252,Mittelburgenland,9
+13347,253,Lutzville Valley,10
+13402,254,North Carolina,1
+13440,255,Apalta,7
+13765,256,Malleco,7
+14008,257,Israel,12
+14172,258,Guerrouane,30
+14187,259,Valais,36
+14271,260,Choapa Valley,7
+14756,261,Georgia,23
+14762,262,Ankara,18
+14846,263,Samos,14
+15205,264,Mittelrhein,5
+15350,265,Durbanville,10
+15540,266,Eisenberg,9
+15742,267,Sagrada Familia,7
+16050,268,Obidos,0
+16452,269,Austria,9
+16467,270,Mostar,37
+16542,271,Iowa,1
+16884,272,Patras,14
+17264,273,Korinthia,14
+17492,274,Greece,14
+17725,275,San Clemente,7
+18226,276,Podunavlje,22
+18595,277,Florina,14
+18734,278,Buin,7
+19493,279,Haut-Judee,12
+19530,280,Ukraine,38
+19566,281,Ohio,1
+20633,282,Maipo Valley-Colchagua Valley,7
+21238,283,Breedekloof,10
+21367,284,Leyda Valley-Maipo Valley,7
+21585,285,Cederberg,10
+21687,286,Vermont,1
+21791,287,Switzerland,36
+21921,288,Waitaki Valley,11
+22027,289,Eger,13
+22129,290,Golan Heights,12
+22398,291,FruÅ¡ka Gora,27
+22421,292,Philadelphia,10
+22687,293,Muzla,39
+22970,294,Matra,13
+23213,295,Pirque,7
+23399,296,Vinho Espumante de Qualidade,0
+23814,297,Negev,12
+24118,298,Pitsilia Mountains,34
+24212,299,East Coast,11
+24320,300,Mavrodaphne of Patras,14
+24335,301,Attica,14
+25068,302,Brazil,28
+25177,303,Progreso,24
+25285,304,ElazÄ±Ä-Diyarbakir,18
+25447,305,Jonkershoek Valley,10
+25466,306,Tikves,40
+25509,307,Vale Trentino,28
+26227,308,Turkey,18
+26377,309,Waiheke Island,11
+26926,310,Molina,7
+26928,311,Serra do Sudeste,28
+27214,312,Missouri,1
+27296,313,Dalmatian Coast,22
+27302,314,Eilandia,10
+27691,315,Dealurile Munteniei,15
+28320,316,Thraki,14
+28419,317,Curico and Maipo Valleys,7
+28437,318,Å tajerska,20
+28456,319,Middle and South Dalmatia,22
+28589,320,Kentucky,1
+29284,321,Å½upa,27
+30663,322,Pafos,34
+30764,323,Monemvasia,14
+30835,324,Szekszard,13
+31283,325,Tulbagh,10
+31417,326,Madeira,0
+31596,327,ElazÄ±Ä,18
+31615,328,Cappadocia,18
+32354,329,Kutjevo,22
+32518,330,Ismarikos,14
+33322,331,Connecticut,1
+33442,332,Sithonia,14
+33730,333,Curico and Leyda Valleys,7
+34284,334,Agioritikos,14
+34450,335,Casablanca-Curico Valley,7
+35040,336,Beotia,14
+35060,337,Algarve,0
+35172,338,Hemel en Aarde,10
+35702,339,Retsina,14
+36724,340,Amindeo,14
+36774,341,Terras do Sado,0
+37264,342,Coelemu,7
+37709,343,Cape South Coast,10
+38943,344,Sopron,13
+39510,345,Bulgaria,33
+40686,346,North Dalmatia,22
+41091,347,Northern Cape,10
+42165,348,Vinho da Mesa,0
+42853,349,Hvar,22
+42873,350,Cephalonia,14
+45270,351,Lemesos,34
+46203,352,Groenekloof,10
+47203,353,Cahul,29
+47420,354,Cyclades,14
+49516,355,Elim,10
+50589,356,Ticino,36
+50709,357,Moscatel do Douro,0
+51746,358,Brda,20
+51765,359,DingaÄ,22
+51821,360,Morocco,30
+52269,361,Achaia,14
+52271,362,Polkadraai Hills,10
+52628,363,Bot River,10
+54477,364,Amyndeon,14
+54593,365,Vanju Mare,15
+54607,366,Hrvatsko Primorje,22
+56862,367,Central Greece,14
+58335,368,Dolenjska,20
+59653,369,Osterreichischer Perlwein,9
+60391,370,Requinoa,7
+61084,371,Mavrodaphne de Cephalonie,14
+61992,372,Goumenissa,14
+62504,373,Portugal,0
+62561,374,Messinia,14
+62662,375,Lakonia,14
+62668,376,Markopoulo,14
+63926,377,Vinho Licoroso,0
+64677,378,Campanha,28
+66353,379,Paardeberg,10
+68539,380,San Antonio de las Minas Valley,17
+71952,381,Krania Olympus,14
+72343,382,Corinthia,14
+73221,383,Slovenska Istra,20
+73397,384,Commandaria,34
+73725,385,Gladstone,11
+74382,386,Jerusalem Hills,12
+79626,387,Mount Athos,14
+80157,388,Colares,0
+82894,389,Casablanca & Leyda Valleys,7
+82964,390,Dealurile HuÈilor,15
+83230,391,Urla-Thrace,18
+85527,392,Sudburgenland,9
+86739,393,Cape Peninsula,10
+87978,394,Codru Region,29
+88294,395,Sterea Ellada,14
+88313,396,Muscat of Patras,14
+90002,397,Imathia,14
+90426,398,Alenteo,0
+95706,399,Massachusetts,1
+95716,400,Canada Other,16
+103275,401,Malgas,10
+104839,402,Letrinon,14
+105940,403,Muscat of Kefallonian,14
+106443,404,Thessalikos,14
+108866,405,Hawaii,1
+109989,406,China,41
+110237,407,Limnos,14
+110247,408,Viile Timis,15
+111212,409,Krk,22
+111418,410,Arcadia,14
+111612,411,Cape Agulhas,10
+112131,412,Kathikas,34
+112132,413,Vin de Pays de Velvendo,14
+118120,414,Landwein Rhein,5
+121719,415,Lesbos,14
+123510,416,Tavora-Varosa,0
+129280,417,Neuchatel,36
