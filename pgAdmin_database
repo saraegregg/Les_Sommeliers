@@ -1,0 +1,14 @@
+-- Creating tables for Wine_Data
+CREATE TABLE wines (
+    country VARCHAR(40),
+    description VARCHAR,
+	points INT, 
+	price INT, 
+	province VARCHAR, 
+	taster_name VARCHAR,
+	title VARCHAR,
+	variety VARCHAR,
+	winery VARCHAR
+);
+
+SELECT * from database_2
