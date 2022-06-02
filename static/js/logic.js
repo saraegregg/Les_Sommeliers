@@ -36,13 +36,13 @@ let baseMaps = {
   "Dark": dark
 };
 
-// 1. Add a 2nd layer group for the tectonic plate data.
+// 1. Add a 2nd layer group for the top wine data
 let AllWines = new L.LayerGroup();
 let TopPointWines = new L.LayerGroup();
 let MidPointWines = new L.LayerGroup();
 let LowPointWines = new L.LayerGroup();
 
-// 2. Add a reference to the tectonic plates group to the overlays object.
+// 2. Add a reference to the top wine data to the overlays object.
 let overlays = {
   "All Top Wines": AllWines,
   "100 Point Wines": TopPointWines,
@@ -54,10 +54,29 @@ let overlays = {
 // layers are visible.
 L.control.layers(baseMaps, overlays).addTo(map);
 
+// Accessing the USGS Earthquake data URL
+let wineData = "https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/static/js/top_wine_data.json";
+// Grabbing our GeoJSON data.
+d3.json(wineData).then(function(data) {
 // Retrieve the earthquake GeoJSON data.
 
-d3.json("top_wine_data.json").then(function(error, data) {
-  console.log(data)
+// d3.csv("https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/Mapping/top_wine_data.csv").then(function(csv) {
+//   console.log(csv)
+//   data = csv;
+//   addMarkers();
+//   styleInfo();
+//   getColor();
+//   getRadius();
+// // });
+
+// var data;
+
+// function addMarkers() {
+//   data.forEach(function(d) {
+//     var marker = L.circleMarker([+d.lat, +d.lon]);
+//     marker.addTo(map);
+//   })
+// }
 
   // This function returns the style data for each of the earthquakes we plot on
   // the map. We pass the magnitude of the earthquake into two separate functions
@@ -66,9 +85,9 @@ d3.json("top_wine_data.json").then(function(error, data) {
     return {
       opacity: 1,
       fillOpacity: 1,
-      fillColor: getColor(feature.properties.mag),
+      fillColor: getColor(points),
       color: "#000000",
-      radius: getRadius(feature.properties.mag),
+      radius: getRadius(points),
       stroke: true,
       weight: 0.5
     };
@@ -76,13 +95,13 @@ d3.json("top_wine_data.json").then(function(error, data) {
 
   // This function determines the color of the marker based on the points of the wine
   function getColor(points) {
-    if (points = 100) {
+    if (points === 100) {
       return "#ea2c2c";
     }
-    if (points = 99) {
+    if (points === 99) {
       return "#ea822c";
     }
-    if (points = 98) {
+    if (points === 98) {
       return "#ee9c00";
     }
   }
@@ -95,24 +114,28 @@ d3.json("top_wine_data.json").then(function(error, data) {
     }
     return points * 4;
   }
+  
 
   // Creating a GeoJSON layer with the retrieved data.
-  L.geoJson(data, {
+  L.geoJson(wineData, {
     	// We turn each feature into a circleMarker on the map.
-    	pointToLayer: function(feature, latlng) {
-      		console.log(data);
-      		return L.circleMarker(latlng);
+    	pointToLayer: function(lat, lon) {
+      		console.log(wineData);
+      		return L.circleMarker(lat, lon);
         },
       // We set the style for each circleMarker using our styleInfo function.
     style: styleInfo,
      // We create a popup for each circleMarker to display the magnitude and location of the earthquake
      //  after the marker has been created and styled.
      onEachFeature: function(feature, layer) {
-      // layer.bindPopup("Magnitude: " + feature.properties.mag + "<br>Location: " + feature.properties.place);
-    }})}).addTo(AllWines);
+      layer.bindPopup("Points: " + points + "<br>Location: " + country);
+    }
+  .addTo(AllWines);
 
   // Then we add the earthquake layer to our map.
-  AllWines.addTo(map);
+ AllWines.addTo(map);
+});
+});
 
 // //Deliverable 2 Major Earthqaukes
 // // 3. Retrieve the major earthquake GeoJSON data >4.5 mag for the week.
