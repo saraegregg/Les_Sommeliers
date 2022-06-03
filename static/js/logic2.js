@@ -60,6 +60,15 @@ let overlays = {
      //creating a GeoJSON layer with the retrieved data.
     console.log(csv)
     data = csv;
+    addMarkers();
+   
+
+  function addMarkers() {
+  data.forEach(function(d) {
+    var marker = L.circleMarker([+d.lat, +d.lon]);
+    marker.addTo(map);
+  })
+}
 
     function styleInfo(feature) {
         return {
@@ -80,7 +89,7 @@ let overlays = {
             return points * 4;
         }
     
-
+   
     L.geoJSON(data, {
          //style:myStyle
          // onEachFeature: function(feature,layer) {
@@ -91,7 +100,14 @@ let overlays = {
             return L.circleMarker(lat, lon);
           },
           //Set the style for each circleMarker using styleInfo function
-          style: styleInfo
-    }).addTo(map);
+          style: styleInfo,
+          //We create a popup for each circleMarker to display the points and location
+          //after the marker has been created and styled.
+          onEachFeature: function(feature, layer) {
+            layer.bindPopup("Points:" + points);
+          }
+    }).addTo(AllWines);
+    // then we add the wine layer to our map
+    AllWines.addTo(map);
 });
  
