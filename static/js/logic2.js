@@ -53,7 +53,7 @@ let overlays = {
  L.control.layers(baseMaps, overlays).addTo(map);
 
  // naming data
- let wineData = "https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/Mapping/top_wine_data.csv";
+ let wineData = "https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/static/resources/top_wine_data.csv";
 
  //Grabbing our GeoJSON data
  d3.csv(wineData).then(function(csv) {
@@ -109,5 +109,188 @@ let overlays = {
     }).addTo(AllWines);
     // then we add the wine layer to our map
     AllWines.addTo(map);
-});
+
  
+// SECOND OVERLAY 
+// naming data
+let wine100Data = "https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/static/resources/100wines.csv";
+
+// //Grabbing our GeoJSON data
+d3.csv(wine100Data).then(function(csv) {
+    //creating a GeoJSON layer with the retrieved data.
+   console.log(csv)
+   data = csv;
+   addMarkers();
+   
+  
+
+ function addMarkers() {
+ data.forEach(function(d) {
+   var marker = L.circleMarker([+d.lat, +d.lon]);
+   marker.addTo(map);
+ })
+}
+
+   function styleInfo(feature) {
+       return {
+           opacity: 1, 
+           fillOpacity: 1,
+           fillColor: "#ffae42",
+           color: "#000000",
+           radius: getRadius(points),
+           stroke: true,
+           weight: 0.5
+       };
+   }
+
+   function getRadius(points) {
+       if (points === 100) {
+           return 1;
+       }
+           return points * 4;
+       }
+   
+  
+   L.geoJSON(data, {
+        //style:myStyle
+        // onEachFeature: function(feature,layer) {
+       // layer.bindPopup(<h2>"Points:" + points)
+       //}
+       pointToLayer: function(feature, lat, lon) {
+           console.log(data);
+           return L.circleMarker(lat, lon);
+         },
+         //Set the style for each circleMarker using styleInfo function
+         style: styleInfo,
+         //We create a popup for each circleMarker to display the points and location
+         //after the marker has been created and styled.
+         onEachFeature: function(feature, layer) {
+           layer.bindPopup("Points:" + points);
+         }
+   }).addTo(TopPointWines);
+   // then we add the wine layer to our map
+   TopPointWines.addTo(map);
+
+   //OVER 3
+   // naming data
+let wine99Data = "https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/static/resources/99wines.csv";
+
+// //Grabbing our GeoJSON data
+d3.csv(wine99Data).then(function(csv) {
+    //creating a GeoJSON layer with the retrieved data.
+   console.log(csv)
+   data = csv;
+   addMarkers();
+   
+  
+
+ function addMarkers() {
+ data.forEach(function(d) {
+   var marker = L.circleMarker([+d.lat, +d.lon]);
+   marker.addTo(map);
+ })
+}
+
+   function styleInfo(feature) {
+       return {
+           opacity: 1, 
+           fillOpacity: 1,
+           fillColor: "#ffae42",
+           color: "#000000",
+           radius: getRadius(points),
+           stroke: true,
+           weight: 0.5
+       };
+   }
+
+   function getRadius(points) {
+       if (points === 100) {
+           return 1;
+       }
+           return points * 4;
+       }
+   
+  
+   L.geoJSON(data, {
+        //style:myStyle
+        // onEachFeature: function(feature,layer) {
+       // layer.bindPopup(<h2>"Points:" + points)
+       //}
+       pointToLayer: function(feature, lat, lon) {
+           console.log(data);
+           return L.circleMarker(lat, lon);
+         },
+         //Set the style for each circleMarker using styleInfo function
+         style: styleInfo,
+         //We create a popup for each circleMarker to display the points and location
+         //after the marker has been created and styled.
+         onEachFeature: function(feature, layer) {
+           layer.bindPopup("Points:" + points);
+         }
+   }).addTo(MidPointWines);
+   // then we add the wine layer to our map
+   MidPointWines.addTo(map);
+  // OVERLAY 4
+     // naming data
+let wine98Data = "https://raw.githubusercontent.com/saraegregg/Mod20_Group_Challenge/main/static/resources/98wines.csv";
+
+// //Grabbing our GeoJSON data
+d3.csv(wine98Data).then(function(csv) {
+    //creating a GeoJSON layer with the retrieved data.
+   console.log(csv)
+   data = csv;
+   addMarkers();
+   
+  
+
+ function addMarkers() {
+ data.forEach(function(d) {
+   var marker = L.circleMarker([+d.lat, +d.lon]);
+   marker.addTo(map);
+ })
+}
+
+   function styleInfo(feature) {
+       return {
+           opacity: 1, 
+           fillOpacity: 1,
+           fillColor: "#ffae42",
+           color: "#000000",
+           radius: getRadius(points),
+           stroke: true,
+           weight: 0.5
+       };
+   }
+
+   function getRadius(points) {
+       if (points === 100) {
+           return 1;
+       }
+           return points * 4;
+       }
+   
+  
+   L.geoJSON(data, {
+        //style:myStyle
+        // onEachFeature: function(feature,layer) {
+       // layer.bindPopup(<h2>"Points:" + points)
+       //}
+       pointToLayer: function(feature, lat, lon) {
+           console.log(data);
+           return L.circleMarker(lat, lon);
+         },
+         //Set the style for each circleMarker using styleInfo function
+         style: styleInfo,
+         //We create a popup for each circleMarker to display the points and location
+         //after the marker has been created and styled.
+         onEachFeature: function(feature, layer) {
+           layer.bindPopup("Points:" + points);
+         }
+   }).addTo(LowPointWines);
+   // then we add the wine layer to our map
+   LowPointWines.addTo(map);
+  
+  });
+});
+});
+});
