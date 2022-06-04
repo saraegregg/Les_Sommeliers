@@ -1,0 +1,98 @@
+-- Creating Winery table
+CREATE TABLE Winery (
+    Winery_ID INT NOT NULL,
+    Winery_name VARCHAR NOT NULL,
+	Province_ID INT,
+    PRIMARY KEY (Winery_ID),
+    UNIQUE (Winery_ID)
+);
+
+-- Creating Wine table
+CREATE TABLE Wine (
+    Wine_ID INT,
+    Wine_title VARCHAR NOT NULL,
+	Winery_ID INT,
+	Variety VARCHAR,
+	Price INT,
+	PRIMARY KEY (Wine_ID)
+);
+
+-- Creating Evaluation table
+CREATE TABLE Evaluation (
+    Tasting_No INT,
+    Wine_ID INT,
+	Taster_ID INT,
+	Description VARCHAR,
+	Points INT,
+	PRIMARY KEY (Tasting_No)
+);
+
+-- Creating Province table
+CREATE TABLE Province (
+    Province_ID INT,
+    Province_name VARCHAR,
+	Country_ID INT,
+	PRIMARY KEY (Province_ID)
+);
+
+-- Creating Country table
+CREATE TABLE Country (
+    Country_ID INT,
+    Country_name VARCHAR,
+	PRIMARY KEY (Country_ID)
+);
+
+-- Creating Sommelier table
+CREATE TABLE Sommelier (
+    Taster_ID INT,
+    Taster_name VARCHAR,
+	PRIMARY KEY (Taster_ID)
+);
+
+-- Joining the tables
+SELECT e.description,
+	e.points,
+	w.wine_ID, 
+	w.variety,
+	w.price,
+	pr.province_ID, 
+	co.country_ID, 
+	co.country_name,
+	wy.winery_ID
+INTO ml_master_table
+FROM Evaluation AS e
+JOIN Wine AS w
+ON e.wine_ID = w.wine_ID
+JOIN Winery AS wy
+ON wy.winery_ID = w.winery_ID
+JOIN Province AS pr
+ON pr.province_ID = wy.province_ID
+JOIN Country AS co
+ON co.country_ID = pr.country_ID;
+
+SELECT * from winery
+
+
+-- SELECT e."wine_ID",
+-- 	e."description",
+-- 	e."points",
+-- 	w."variety",
+-- 	w."price",
+-- 	wy."winery_ID",
+-- 	pr."province_ID",
+-- 	co."country_ID",
+-- 	co."country"
+-- INTO ml_master
+-- FROM Evaluation as e
+-- 	JOIN "Wine" as w
+-- 		ON (e."wine_ID" = w."wine_ID")
+-- 	JOIN "Winery" as wy
+-- 		ON (w."winery_ID" = wy."winery_ID")
+-- 	JOIN "Province" as pr
+-- 		ON (wy."province_ID" = pr."province_ID")
+-- 	JOIN "Country" as co
+-- 		ON (pr."country_ID" = co."country_ID");
+		
+SELECT * FROM Evaluation
+
+SELECT * FROM ml_master_table
