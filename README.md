@@ -58,6 +58,9 @@ Using supervised machine learning, by way of a Random Forest Classfier model, we
 - Dissection of dataset into training and testing groups
 - Calculating a confusion matrix to assign target value predictions of Fine, Good, Very Good, and Exeptional.
 
-![ML](https://github.com/saraegregg/Mod20_Group_Challenge/blob/2ab0190fe76067d6ff9a9ddd7a6b1a1f714f352a/Images/ML_initial.png)
+
+![ML](https://github.com/saraegregg/Mod20_Group_Challenge/blob/18b929c7ab5ce643665469ae907d1d551aa79c10/Images/ML%20ModelFinal1.png)
+
+![ML_CM](https://github.com/saraegregg/Mod20_Group_Challenge/blob/18b929c7ab5ce643665469ae907d1d551aa79c10/Images/ML%20FinalCMpng.png)
 
 
