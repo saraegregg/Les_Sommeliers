@@ -32,7 +32,7 @@ The following dashboard for this project, highlights several findings including:
 - Average Price and Points by Country
 - Wine Quality Storyboard
 
-![WINE QUALITY DASHBOARD](https://public.tableau.com/app/profile/matt.vogl6607/viz/FinalProjectStory_16543538908720/AveragePriceandPointsbyCountry) 
+![WINE QUALITY DASHBOARD](https://public.tableau.com/shared/Z8G9HZ72Z?:display_count=n&:origin=viz_share_link) 
 
 ## Mapping with Leaflet
 In addition to the Tableau Dashboard, the Sommeliers are creating an interactive map that will show the winery location for the top 20 reasonable priced (<$100) wines. This is intended to help wine enthusiasts plan travel and vacation itineraries to experience the worlds top wines! Progress thus far includes an API call for lat/long and an initial map with tile layers and layer groups.
