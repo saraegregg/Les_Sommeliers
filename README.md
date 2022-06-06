@@ -47,8 +47,8 @@ In Google Colab, we used a Spark Session to explore the relationship between the
 
 Once parsed to a clean dataframe, the team reviewed the top 50 most common words included in the description, and selected ten to include as features in our machine learning model. 
 
-## Machine Learning Component Overview 
-Using supervised machine learning, by way of a Random Forest Classfier model, we will predict point value classification (our target) using a specified set of features and utilizing several techniques such as:
+## Machine Learning Component 
+Using supervised machine learning, by way of a Random Forest Classfier model, we predict point value classification (our target) using a specified set of features and utilizing several techniques such as:
 - Conversion of categorical values to numerical using OneHot Encoder
 - Bucketing or binning of feature data values to reduce the number of unique variables in each feature selection list as well as our target output
 - Removal of non-essential columns such as Region, Title, Winery, Taster Name, and Taster Twitter Handle
@@ -61,4 +61,7 @@ During our machine learning journey, several other models were built and tested 
 
 ![ML_CM](https://github.com/saraegregg/Mod20_Group_Challenge/blob/18b929c7ab5ce643665469ae907d1d551aa79c10/Images/ML%20FinalCMpng.png)
 
+## Flask Application 
+To showcase what our team built and what we learned about our dataset, the team built a Flask application with several routes. The target audience for the web app are people who work in wine control roles in the restaurant service and supply industries: wine buyers and sellers, bar and restaurant managers and wine directors.  The homepage is a landing that directs users to three routes, each of which allows these individuals to learn more about different wines in unique ways. The first route directs to a filterable table that displays the first 100 wines in our database that meet all of the filter requirements and includes the full description given by the Sommelier. The second route directs to a tool that allows users to input wine features and receive a prediction of the wine quality by applying our machine learning model to the inputs. The final route directs to an interactive Tableau dashboard that explores the highest scoring wines around the world and the top wineries in the United States. 
 
+The code for this is housed in the following GitHub repository: (https://github.com/jenv5507/wine)
