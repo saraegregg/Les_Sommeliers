@@ -48,12 +48,24 @@ In Google Colab, we used a Spark Session to explore the relationship between the
 Once parsed to a clean dataframe, the team reviewed the top 50 most common words included in the description, and selected ten to include as features in our machine learning model. 
 
 ## Machine Learning Component 
-Using supervised machine learning, by way of a Random Forest Classfier model, we predict point value classification (our target) using a specified set of features and utilizing several techniques such as:
-- Conversion of categorical values to numerical using OneHot Encoder
-- Bucketing or binning of feature data values to reduce the number of unique variables in each feature selection list as well as our target output
+Using supervised machine learning, by way of a Random Forest Classfier model, we predict point value classification (our target) using a specified set of features and utilizing several preprocessing techniques. Our machine learning journey consisted of:
+### Data preprocessing
+- For data preprocessing we read in an initially cleaned csv of our wine data set.
+### Feature engineering, feature selection, and the decision-making process
+- Based on initial review of our cleaned data set and our NLP parsed description column, we selected the features we felt would best contribute to a solid classification of wine selection. These features included country, variety of wine, price, and our selection of 10 most used descriptive words from our parsed description column. We pulled our 10 descriptive words into our dataframe using a for loop and lambda function to create a column for each descriptive word.
+- Bucketing or binning of feature data values to reduce the number of unique variables in each feature selection as well as our target output
 - Removal of non-essential columns such as Region, Title, Winery, Taster Name, and Taster Twitter Handle
-- Dissection of dataset into training and testing groups
-- Calculating a confusion matrix to assign target value predictions of Fine, Good, Very Good, and Exeptional.
+### How data was split into training and testing sets
+- Our data was split into training and testing sets using sklearn library functionality in python. 
+### Model choice including limitations and benefits
+- We chose the Random Forest Classifier model since most of our data was text rather than numeric and thus had to be converted by way of OneHotEncoder instance. This model produced the best accuracy score of all the ones built and tested (Linear Regression, LASSO, logistic Regression, and Neural Network). While we were able to build this classifier model using a function that set our target values into buckets, we may have preferred to utilize those target values individually for prediction. However, given that the text data needed to be converted to numeric (and there were 20 points’ values along with 13 features)it feels as though this model may have performed better with a smaller data set or fewer features. We elected to change our model from linear regression to classifier as it appeared to work better with the amount and type of data contained within the dataset. Given the number of rows and the features we felt needed to stay in the model, putting our target output into ranges and switching to a classifier model felt like the best choice. Classification falls into four categories : Fine, Good, Very Good, and Exceptional.
+### Model Training
+- Using the standard 75/25 training and testing parameters, we trained our model on 72315 rows and tested on the remaining 24105 rows.
+- We also did some dropping of columns to further test the model and try to increase our accuracy scores, but this did not benefit us.
+### Current Accuracy Score
+- Our current accuracy score stands at around 62%. Based on our confusion matrix, this overall score could be slightly skewed as it appears a large number of points values fall within the “Good” category range containing assigned point values of 85-90.
+
+
 
 During our machine learning journey, several other models were built and tested including linear regression, LASSO, and Neural Network versions. While the initial direction was towards a linear regression model, the team ultimately decided upon Random Forest Classifier for our model as it produced the best possible output potential given our chosen list of feature inputs. We did attempt alternate testing via dropping of columns and not binning our target output array, but the current feature selections and binning of our target output netted the best accuracy score among the different variations.
 
