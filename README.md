@@ -66,9 +66,6 @@ Using supervised machine learning, by way of a Random Forest Classfier model, we
 - Our current accuracy score stands at around 62%. Based on our confusion matrix, this overall score could be slightly skewed as it appears a large number of points values fall within the “Good” category range containing assigned point values of 85-90.
 
 
-
-During our machine learning journey, several other models were built and tested including linear regression, LASSO, and Neural Network versions. While the initial direction was towards a linear regression model, the team ultimately decided upon Random Forest Classifier for our model as it produced the best possible output potential given our chosen list of feature inputs. We did attempt alternate testing via dropping of columns and not binning our target output array, but the current feature selections and binning of our target output netted the best accuracy score among the different variations.
-
 ![ML](https://github.com/saraegregg/Mod20_Group_Challenge/blob/18b929c7ab5ce643665469ae907d1d551aa79c10/Images/ML%20ModelFinal1.png)
 
 ![ML_CM](https://github.com/saraegregg/Mod20_Group_Challenge/blob/18b929c7ab5ce643665469ae907d1d551aa79c10/Images/ML%20FinalCMpng.png)
