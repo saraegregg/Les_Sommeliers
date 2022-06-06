@@ -64,4 +64,8 @@ During our machine learning journey, several other models were built and tested 
 ## Flask Application 
 To showcase what our team built and what we learned about our dataset, the team built a Flask application with several routes. The target audience for the web app are people who work in wine control roles in the restaurant service and supply industries: wine buyers and sellers, bar and restaurant managers and wine directors.  The homepage is a landing that directs users to three routes, each of which allows these individuals to learn more about different wines in unique ways. The first route directs to a filterable table that displays the first 100 wines in our database that meet all of the filter requirements and includes the full description given by the Sommelier. The second route directs to a tool that allows users to input wine features and receive a prediction of the wine quality by applying our machine learning model to the inputs. The final route directs to an interactive Tableau dashboard that explores the highest scoring wines around the world and the top wineries in the United States. 
 
+![route 1](/Images/route1.png)
+![route 2](/Images/route2.png)
+![route 3](/Images/route3.png)
+
 The code for this is housed in the following GitHub repository: (https://github.com/jenv5507/wine)
