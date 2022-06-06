@@ -1,7 +1,7 @@
-# Mod20_Group_Challenge
+# The Sommeliers
 
 ## Project Overview: Wine Quality Prediction
-The goal of this project is to predict quality of wine by utilizing a dataset highlighting over 130,000 individual wine entries with factors such as region, province, price, points (quality), description, variety, and designation. The project will utilize a supervised machine learning approach to predict points (indicating wine quality from 80-100) by incorporating many of the factors included above. The project will also build a dashboard and/or interactive map to illustrate wine quality and price by region and province as well as highlight top wineries by location. The dashboard could be beneficial for restaurant owners seeking to build a comprehensive and well-rounded wine offering and the map could be helpful for travel agents and/or individual consumers seeking high quality wine on the road.
+The goal of this project is to predict quality of wine utilizing a dataset comprised of over 130,000 individual wine entries and includes factors such as region, province, price, points (quality), description, variety, and designation. The project will implement a supervised machine learning approach to predict quality (categorized into four ranges based on points values) incorporating many of the factors included above. The project will incorporate a dashboard and/or interactive map to illustrate wine quality and price by region and province as well as highlight top wineries by location. This data seeks to aid restaurant owners seeking to build a comprehensive and well-rounded wine offering while the map could be beneficial for travel agents and/or individual consumers seeking high quality wine on the road.
 
 ## Exploratory Data Analysis and Data Cleaning
 Initial processing began with removing the specialty characters from the original Winemag.csv file so that the NLP in the machine learning model would be able to recognize words such as "creme brulee" or "creme anglaise", and regions with special characters (eg. Rias Baixas) could still be included in our initial data analysis.
@@ -26,13 +26,10 @@ The following dashboard for this project, highlights several findings including:
 
 - Average Points by country
 - Average Price for Top US Wineries
-- Price and points value
-- Price and Point Value with Labels
 - Price and Points by Top Varieties
-- Average Price and Points by Country
-- Wine Quality Storyboard
+- Average Price by Country
 
-[WINE QUALITY DASHBOARD](https://public.tableau.com/views/FinalProjectStory_16543538908720/AveragePriceandPointsbyCountry?:language=en-US&:display_count=n&:origin=viz_share_link) 
+[WINE QUALITY DASHBOARD](https://public.tableau.com/shared/Z8NXQCCPY?:display_count=n&:origin=viz_share_link)
 
 ## Mapping with Leaflet
 In addition to the Tableau Dashboard, the Sommeliers are creating an interactive map that will show the winery location for the top 20 reasonable priced (<$100) wines. This is intended to help wine enthusiasts plan travel and vacation itineraries to experience the worlds top wines! Progress thus far includes an API call for lat/long and an initial map with tile layers and layer groups.
@@ -53,11 +50,12 @@ Once parsed to a clean dataframe, the team reviewed the top 50 most common words
 ## Machine Learning Component Overview 
 Using supervised machine learning, by way of a Random Forest Classfier model, we will predict point value classification (our target) using a specified set of features and utilizing several techniques such as:
 - Conversion of categorical values to numerical using OneHot Encoder
-- Bucketing or binning of feature data values to reduce the number of unique variables in each feature selection list
+- Bucketing or binning of feature data values to reduce the number of unique variables in each feature selection list as well as our target output
 - Removal of non-essential columns such as Region, Title, Winery, Taster Name, and Taster Twitter Handle
 - Dissection of dataset into training and testing groups
 - Calculating a confusion matrix to assign target value predictions of Fine, Good, Very Good, and Exeptional.
 
+During our machine learning journey, several other models were built and tested including linear regression, LASSO, and Neural Network versions. While the initial direction was towards a linear regression model, the team ultimately decided upon Random Forest Classifier for our model as it produced the best possible output potential given our chosen list of feature inputs. We did attempt alternate testing via dropping of columns and not binning our target output array, but the current feature selections and binning of our target output netted the best accuracy score among the different variations.
 
 ![ML](https://github.com/saraegregg/Mod20_Group_Challenge/blob/18b929c7ab5ce643665469ae907d1d551aa79c10/Images/ML%20ModelFinal1.png)
 
