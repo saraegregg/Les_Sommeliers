@@ -36,7 +36,7 @@ from sklearn.metrics import classification_report
 
 #  Import and read the csv file(s)
 #file_path = "../Mod20_Group_Challenge/iris.csv"
-wine_df=pd.read_csv("../data_cleaning/ml_master_table.csv", encoding='latin1')
+wine_df=pd.read_csv("../resources/ML/ml_master_table.csv", encoding='latin1')
 
 
 # In[4]:
