@@ -1,12 +1,14 @@
 # The Sommeliers
 
 ## Project Overview: Wine Quality Prediction
-The goal of this project is to predict quality of wine utilizing a dataset comprised of over 130,000 individual wine entries and includes factors such as region, province, price, points (quality), description, variety, and designation. The project will implement a supervised machine learning approach to predict quality (categorized into four ranges based on points values) incorporating many of the factors included above. The project will incorporate a dashboard and/or interactive map to illustrate wine quality and price by region and province as well as highlight top wineries by location. This data seeks to aid restaurant owners seeking to build a comprehensive and well-rounded wine offering while the map could be beneficial for travel agents and/or individual consumers seeking high quality wine on the road.
+The goal of this project is to predict quality of wine utilizing a dataset from Kaggle.com (https://www.kaggle.com/datasets/zynicide/wine-reviews) scrapped in 2017 from winemag.com, and comprised of over 130,000 individual wine entries and includes factors such as region, province, price, points (quality), description, variety, and designation. The project will implement a supervised machine learning approach to predict quality (categorized into four ranges based on points values) incorporating many of the factors included above. This is useful for people who work in wine control roles in the restaurant service and supply industries: wine buyers and sellers, bar and restaurant managers and wine directors. It also is helpful for people who have up-to-now rely on the marketing and wine bottle design in choosing a vintage to order at a restaurant or gift. The project hopes to answer the following questions: How does price, country of provenance, description key words, and grape variety influence the quality of wine, as reviewed by professional sommeliers? The project will incorporate a dashboard and/or interactive map to illustrate wine quality and price by region and province as well as highlight top wineries by location. This data seeks to aid restaurant owners seeking to build a comprehensive and well-rounded wine offering while the map could be beneficial for travel agents and/or individual consumers seeking high quality wine on the road. 
 
 ## Exploratory Data Analysis and Data Cleaning
 Initial processing began with removing the specialty characters from the original Winemag.csv file so that the NLP in the machine learning model would be able to recognize words such as "creme brulee" or "creme anglaise", and regions with special characters (eg. Rias Baixas) could still be included in our initial data analysis.
 
-We created a Jupyter Notebook (data_week1 found in the data_cleaning folder) with code that imports the dataset by reading in the wine_data.csv and removes unnecesary columns. Then we view the measures of central tendency and create box and whisker plots to understand the spread of the numerical data. Additional preliminary visualizations show the countries represented and the relative number of wines each provided to the dataset.
+We created a Jupyter Notebook (data_week1 found in the Data_cleaning_EDA folder) with python code that imports the dataset by reading in the wine_data.csv to a Pandas dataFrame and removes unnecesary columns. Then we use numpy and matplotlib libraries to view the measures of central tendency and create box and whisker plots to understand the spread of the numerical data. Additional preliminary visualizations show the countries represented and the relative number of wines each provided to the dataset.
+
+Finally, the data is arranged into dataFrames and exported as csvs to be loaded into our database, as well as into one as a json to later be converted via regex in gishbash into a JavaScript array of dictionaries for our Flask app.
 
 ![Number of Wines by Country](/Images/No_wines_by_co.png)
 ![Points Box and Whisker Plot](/Images/Points_baw.png)
@@ -29,6 +31,7 @@ The following dashboard for this project, highlights several findings including:
 - Price and Points by Top Varieties
 - Average Price by Country
 
+[WINE QUALITY DASHBOARD](https://public.tableau.com/app/profile/nicole.harrison8672/viz/shared/2R4MZ39B2)
 [WINE QUALITY DASHBOARD](https://public.tableau.com/shared/Z8NXQCCPY?:display_count=n&:origin=viz_share_link)
 
 ## Mapping with Leaflet
@@ -70,11 +73,19 @@ Using supervised machine learning, by way of a Random Forest Classfier model, we
 
 ![ML_CM](https://github.com/saraegregg/Mod20_Group_Challenge/blob/18b929c7ab5ce643665469ae907d1d551aa79c10/Images/ML%20FinalCMpng.png)
 
+<<<<<<< HEAD
+## Flask Application 
+To showcase what our team built and what we learned about our dataset, the team built a Flask application with several routes, using Bootstrap and CSS, Javascript, Python, and D3. The target audience for the web app are people who work in wine control roles in the restaurant service and supply industries: wine buyers and sellers, bar and restaurant managers and wine directors.  The homepage is a landing that directs users to three routes, each of which allows these individuals to learn more about different wines in unique ways. The first route directs to a filterable table that displays the first 100 wines in our database that meet all of the filter requirements and includes the full description given by the Sommelier. The second route directs to a tool that allows users to input wine features and receive a prediction of the wine quality by applying our machine learning model to the inputs. The final route directs to an interactive Tableau dashboard that explores the highest scoring wines around the world and the top wineries in the United States. 
+=======
 ## Flask Application
 To showcase what our team built and what we learned about our dataset, the team built a Flask application with several routes. The target audience for the web app are people who work in wine control roles in the restaurant service and supply industries: wine buyers and sellers, bar and restaurant managers and wine directors.  The homepage is a landing that directs users to three routes, each of which allows these individuals to learn more about different wines in unique ways. The first route directs to a filterable table that displays the first 100 wines in our database that meet all of the filter requirements and includes the full description given by the Sommelier. The second route directs to a tool that allows users to input wine features and receive a prediction of the wine quality by applying our machine learning model to the inputs. The final route directs to an interactive Tableau dashboard that explores the highest scoring wines around the world and the top wineries in the United States. 
+>>>>>>> 369aa8c212f931dd3f7d0429430bfb48f85f936b
 
 ![route 1](/Images/route1.png)
 ![route 2](/Images/route2.png)
 ![route 3](/Images/route3.png)
 
 The code for this is housed in the following GitHub repository: (https://github.com/jenv5507/wine)
+
+## Learnings and Recommendations for Future Work
+Throughout the project, our team used tools with which we were not experts, and sometimes we were not successful. Our goals for the future include using the Random Forest's ability to analyze which features are the most important in the machine learning model with the purpose of finding which description words are more useful and if choosing different discriptors might improve the accuracy of our model. Another aspect to continue work on is finding a web hosting service for our database, preferably a free service. We hypothesize that the Heroku work we put in would function better if it did not have to pull data locally for the different routes in our Flask web application. Another tweak to the Flask application that we would like to complete is adding more filters on the first route's table, so people can search by price ranges and a given point value and higher.
